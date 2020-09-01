@@ -1,9 +1,12 @@
 package restaurant;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Menu {
+
+
 
     ArrayList<menuItem> dishes = new ArrayList<>();
     private Date lastUpdated = new Date();
@@ -40,5 +43,34 @@ public class Menu {
         }
         return dishes;
     }
+
+    public ArrayList<menuItem> getDishes() {
+        return dishes;
+    }
+
+    public void setDishes(ArrayList<menuItem> dishes) {
+        this.dishes = dishes;
+    }
+
+    public void PrintMenuItem(MenuItem itemToPrint) {
+        System.out.println(itemToPrint);
+    }
+
+    public static void PrintMenu(Menu TheMenuToPrint) {
+        System.out.println(TheMenuToPrint);
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "dishes=" + dishes +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
+
+//    public boolean IsItemEqual(MenuItem item) {
+//
+//
+//    }
 
 }
